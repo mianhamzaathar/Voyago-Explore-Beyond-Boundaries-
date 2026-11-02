@@ -1,49 +1,81 @@
 # Voyago — Explore Beyond Boundaries
 
-A premium, responsive travel agency experience built as a frontend technical assessment. Voyago helps travelers explore destinations and compare illustrative flight, hotel, car rental, and visa options through local mock data.
+**A premium travel planning experience for flights, stays, car hire, and visa support.**
+
+[View the live website](https://voyago-travel.vercel.app) · [GitHub repository](https://github.com/mianhamzaathar/Voyago-Explore-Beyond-Boundaries-)
+
+## Overview
+
+Voyago is a responsive frontend project that presents a polished travel agency experience. Visitors can explore destinations, browse sample offers, and try four interactive travel searches. It is built as a frontend assessment and demonstration: there is no booking provider, backend, or database connected.
 
 ## Features
 
-- Responsive editorial landing page, mobile navigation, destination cards, travel deals, and testimonial carousel.
-- Four booking tabs with required-field/date validation, loading feedback, local filtering, results, and empty states.
-- Client-side newsletter and contact form validation and submission feedback.
-- Scroll reveals, hero animation, and viewport-triggered statistics using GSAP and ScrollTrigger; animations honor reduced-motion preferences.
-- SEO metadata, semantic landmarks, accessible labels, keyboard-operable controls, and responsive layouts.
+- Responsive navigation, hero, destinations, services, travel offers, and footer.
+- Flight, hotel, car rental, and visa search forms with local mock data, validation, date-range checks, loading feedback, results, and empty states.
+- Travelers, cabin class, guests, rooms, car type, nationality, visa type, and destinations included in their relevant search flows.
+- Testimonial carousel and save-offer controls.
+- Client-side newsletter and contact form validation with clear demo-only feedback.
+- GSAP hero and scroll animations, animated statistics, and reduced-motion support.
+- Optimized remote travel images with fallbacks, favicon, metadata, and demo privacy and terms pages.
 
 ## Technology
 
-Next.js App Router, React, TypeScript, Tailwind CSS v4, GSAP, @gsap/react, ScrollTrigger, and Lucide React.
-
-## Project structure
-
-```text
-src/
-  app/       App Router page, layout, global styles, favicon, and demo legal pages
-  data/      Typed local mock datasets for searches and content
-  types/     Shared TypeScript types
-```
+- Next.js 15 App Router and React 19
+- TypeScript
+- Tailwind CSS v4 configuration with custom responsive CSS
+- GSAP, ScrollTrigger, and `@gsap/react`
+- Lucide React icons
+- Local TypeScript mock datasets
 
 ## Run locally
+
+Requirements: Node.js 20 or newer and npm.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Run `npm run typecheck`, `npm run lint`, `npm run build`, then `npm start` to serve the production build.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Mock functionality
+## Quality checks
 
-Booking searches filter local TypeScript datasets and show illustrative USD prices; no reservations or external API calls are made. Newsletter and contact submissions validate and show frontend-only confirmation. Contact information uses fictional `voyago.example` details. The `/privacy` and `/terms` pages explain these demo limitations. Destination photography is served from Unsplash URLs.
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm start
+```
 
-## Screenshots
+## Project structure
 
-Add desktop and mobile screenshots here after running the site locally.
+```text
+src/
+  app/
+    page.tsx          Homepage and interactive booking experience
+    layout.tsx        Root layout and SEO metadata
+    globals.css       Responsive design system and component styles
+    icon.svg          Voyago compass favicon
+    privacy/page.tsx  Demo privacy information
+    terms/page.tsx    Demo terms
+  data/               Flights, hotels, cars, visas, destinations, deals, testimonials
+  types/              Shared TypeScript types
+```
+
+## Mock data and limitations
+
+Search results and prices are local illustrative examples in `src/data/`. Searches do not make reservations or contact suppliers. The contact and newsletter forms validate in the browser and show demo confirmations only; they do not transmit or store form data. Displayed office and phone details are fictional. Travel photos load from Unsplash, so a network connection is needed for the photography.
 
 ## Deployment
 
-Initialize Git in this folder and push it to a new GitHub repository, then import that repository into Vercel and deploy with the default Next.js settings. This project folder currently has no Git repository or remote configured. It requires no secrets or environment variables. Vercel will run the Next.js production build automatically.
+The production site is deployed at [voyago-travel.vercel.app](https://voyago-travel.vercel.app). To publish an update, push the project to the GitHub repository and deploy it from Vercel, or use the Vercel CLI:
 
-## Assessment coverage
+```bash
+vercel --prod --yes --name voyago-travel
+```
 
-The project includes the requested four travel services and mock search journeys, responsive premium interface, GSAP effects, reusable typed content/data, SEO metadata, README, Git ignore rules, and Vercel-compatible Next.js configuration. It is not connected to a booking provider and has not been deployed.
+No environment variables are required for this demo.
+
+## Screenshots
+
+Add desktop and mobile screenshots here when available.
