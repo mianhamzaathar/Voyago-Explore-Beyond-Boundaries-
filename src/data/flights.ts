@@ -1,0 +1,4 @@
+import type { Flight } from "@/types";
+export const flights: Flight[] = [
+ { from:"New York",to:"Paris",airline:"Air France",duration:"7h 20m",price:685,class:"Economy" },{ from:"New York",to:"Paris",airline:"Air France",duration:"7h 20m",price:1120,class:"Premium Economy" },{ from:"New York",to:"Paris",airline:"Air France",duration:"7h 20m",price:2180,class:"Business" },{ from:"New York",to:"Paris",airline:"Air France",duration:"7h 20m",price:4290,class:"First" },{from:"New York",to:"London",airline:"British Airways",duration:"6h 55m",price:620,class:"Economy"},{from:"London",to:"Dubai",airline:"Emirates",duration:"7h 5m",price:790,class:"Business"},{from:"Paris",to:"Dubai",airline:"Air France",duration:"6h 40m",price:740,class:"Economy"},{from:"Los Angeles",to:"Tokyo",airline:"Japan Airlines",duration:"11h 45m",price:980,class:"Economy"},{from:"London",to:"Paris",airline:"Eurostar Air",duration:"1h 15m",price:165,class:"Economy"}
+];
